@@ -10,7 +10,7 @@
   <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Attendance</a>
+            <a class="navbar-brand" href="admin_dashboard.php">Attendance</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -54,7 +54,7 @@
                     </ul>
                 </div>
             </div>
-  <div class="container col-md-10 my-4">
+  <div class="container my-4">
     <h1 class="text-success">Employees Detail</h1>
           <div class="card p-4 shadow-lg">
             <table class="table table-bordered">
@@ -70,6 +70,7 @@
                   <th scope="col">Role</th>
                   <th scope="col">Username</th>
                   <th scope="col">Email</th>
+                  <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -111,6 +112,8 @@
                     <td scope="row">' . $role . '</td>
                     <td>' . $userNmae . '</td>
                     <td>' . $email . '</td>
+                    <td> <button class="btn btn-primary" ><a href="update.php?updateid=' .$id .'" class="text-decoration-none text-light">Update</a></button>
+                        <button class="btn btn-danger" ><a href="delete.php?deleteid=' .$id .'" class="text-decoration-none text-light">Delete</a></button></td>
                 </tr>';
                   }
                 } else {
