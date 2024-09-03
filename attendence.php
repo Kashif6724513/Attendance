@@ -86,6 +86,40 @@ if (isset($_POST['check_out'])) {
     <title>Attendance System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 56px; /* Height of the navbar */
+            bottom: 0;
+            left: 0;
+            width: 20%;
+            overflow-y: auto;
+            background-color: #343a40;
+        }
+
+        .content {
+            margin-top: 56px; /* Height of the navbar */
+            margin-left: 20%; /* Width of the sidebar */
+            height: calc(100vh - 56px);
+            overflow-y: auto;
+            padding: 20px;
+        }
+    </style>
 </head>
 
 <body>
